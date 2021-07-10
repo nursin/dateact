@@ -3,7 +3,11 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Home from './HomeComponent';
 
-
+const mapStateToProps = state => {
+  return {
+    charNames: state.CharNames
+  }
+}
 
 class Main extends Component {
   render() {
