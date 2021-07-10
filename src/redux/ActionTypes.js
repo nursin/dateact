@@ -1,0 +1,1 @@
+export const CHAR_NAMES = 'CHAR_NAMES';
