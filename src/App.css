@@ -102,3 +102,13 @@ p {
 #logo {
   color: white; 
 }
+
+.close {
+  color: #fff; 
+  opacity: 1;
+}
+
+.close:hover {
+  color: rgb(255, 255, 255); 
+  opacity: 1;
+}
