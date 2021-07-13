@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardHeader, CardImg, CardText, CardBody, CardTitle, Button } from 'reactstrap';
+import { Card, CardHeader, CardBody } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 class RenderChooseFeaturesForm extends Component {
   render() {
@@ -52,7 +53,7 @@ class RenderChooseFeaturesForm extends Component {
                   </div>
                   <div className="form-group row mt-4">
                     <div className="col">
-                      <button type="button" id="generateProfileBtn" className="col btn btn-lg text-white bg-blue button-hover-bg-gradient"><i className="fa fa-transgender-alt fa-lg" aria-hidden="true"></i> Generate</button>
+                      <Link type="button" to="/profileready" className="col btn btn-lg text-white bg-blue button-hover-bg-gradient"><i className="fa fa-transgender-alt fa-lg" ></i> Generate</Link>
                     </div>
                   </div>
                 </form>

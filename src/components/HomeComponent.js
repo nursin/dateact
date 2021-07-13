@@ -1,11 +1,10 @@
 import React from 'react';
-import { Card, CardHeader, CardImg, CardText, CardBody, CardTitle, Button } from 'reactstrap';
+import { Card, CardHeader, CardBody } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 
 function Home(props) {
   function RenderInstructionsCard() {
-    console.log(this)
     return(
       
         <Card className="card custom-card">

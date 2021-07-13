@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Main from './components/MainComponent';
-import { Navbar, NavbarBrand } from 'reactstrap';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 

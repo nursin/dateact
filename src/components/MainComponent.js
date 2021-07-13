@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import RenderChooseFeaturesForm from './ChooseFeaturesFormComponent'
 import Header from './HeaderComponent'
 import Home from './HomeComponent';
 import About from './AboutComponent';
 import Contact from './ContactComponent';
 import Footer from './FooterComponent';
+
+import RenderChooseFeaturesForm from './ChooseFeaturesFormComponent'
+import Profile from './ProfileReadyComponent';
 
 
 class Main extends Component {
@@ -34,6 +36,12 @@ class Main extends Component {
         <RenderChooseFeaturesForm />
       );
     }
+    
+    const ProfileReadyComponentPage = () => {
+      return (
+        <Profile />
+      );
+    }
 
     return (
       <div>
@@ -43,8 +51,7 @@ class Main extends Component {
           <Route path='/aboutus' component={AboutPage} />
           <Route path='/contactus' component={ContactPage} />
           <Route path='/choosefeaturesform' component={RenderChooseFeaturesFormPage} />
-
-
+          <Route path='/profileready' component={ProfileReadyComponentPage} />
           <Redirect to='/home' />
         </Switch>
         <Footer />
