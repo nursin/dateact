@@ -9,11 +9,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar dark className="navbar">
-            <div className="container">
-              <NavbarBrand href="/">DateAct</NavbarBrand>
-            </div>
-          </Navbar>
           <Main />
         </div>
       </BrowserRouter>

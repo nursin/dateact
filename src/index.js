@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import 'font-awesome/css/font-awesome.css';
+import 'typeface-open-sans';
+import 'typeface-goblin-one';
 import App from './App';
 
 ReactDOM.render(

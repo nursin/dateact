@@ -94,3 +94,11 @@ header h2 {
 .navbar {
   background-color: #8a30c5; 
 }
+
+#logo:hover {
+  color: #2904ff; 
+}
+
+#logo {
+  color: white; 
+}
