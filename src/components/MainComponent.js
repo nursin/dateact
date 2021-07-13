@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import RenderChooseFeaturesForm from './ChooseFeaturesFormComponent'
 import Header from './HeaderComponent'
 import Home from './HomeComponent';
 import About from './AboutComponent';
@@ -29,6 +29,12 @@ class Main extends Component {
       );
     }
 
+    const RenderChooseFeaturesFormPage = () => {
+      return (
+        <RenderChooseFeaturesForm />
+      );
+    }
+
     return (
       <div>
         <Header />
@@ -36,6 +42,9 @@ class Main extends Component {
           <Route path='/home' component={HomePage} />
           <Route path='/aboutus' component={AboutPage} />
           <Route path='/contactus' component={ContactPage} />
+          <Route path='/choosefeaturesform' component={RenderChooseFeaturesFormPage} />
+
+
           <Redirect to='/home' />
         </Switch>
         <Footer />
