@@ -52,6 +52,7 @@ class Main extends Component {
           <Route path='/contactus' component={ContactPage} />
           <Route path='/choosefeaturesform' component={RenderChooseFeaturesFormPage} />
           <Route path='/profileready' component={ProfileReadyComponentPage} />
+          <Route path='/restart' component={HomePage} />
           <Redirect to='/home' />
         </Switch>
         <Footer />
