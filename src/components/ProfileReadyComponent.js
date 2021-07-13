@@ -5,8 +5,8 @@ class Profile extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
-          <div id="profileReadyContainer" className="col-12">
+        <div className="row row-content">
+          <div className="col-12">
             <div className="card custom-card">
               <div className="card-header bg-gradient"><h2 className="text-white text-center" id="profileHeader"></h2></div>
               <div className="card-body col">
