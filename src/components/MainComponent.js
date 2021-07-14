@@ -7,7 +7,7 @@ import Contact from './ContactComponent';
 import Footer from './FooterComponent';
 import RenderChooseFeaturesForm from './ChooseFeaturesFormComponent'
 import Profile from './ProfileReadyComponent';
-import CreateChar from './CreateCharFormComponent';
+// import CreateChar from './CreateCharFormComponent';
 
 
 class Main extends Component {

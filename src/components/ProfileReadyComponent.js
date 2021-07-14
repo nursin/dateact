@@ -8,7 +8,7 @@ class Profile extends Component {
         <div className="row row-content">
           <div className="col-12">
             <div className="card custom-card">
-              <div className="card-header bg-gradient"><h2 className="text-white text-center" id="profileHeader"></h2></div>
+              <div className="card-header bg-gradient"><h2 className="text-white text-center" id="profileHeader">Character profile ready</h2></div>
               <div className="card-body col">
                 <div id="name" className="col-12"></div>
                 <div id="age" className="col-12 mt-1"></div>

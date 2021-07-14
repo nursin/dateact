@@ -19,12 +19,12 @@ class About extends Component {
             </p>
           </div>
           <div className="col-12 col-md-6">
-            <img src="../assets/images/eye-iris.jpg" alt="iris picture" className="img-fluid img-thumbnail" />
+            <img src="../assets/images/eye-iris.jpg" alt="iris" className="img-fluid img-thumbnail" />
           </div>
         </div>
         <div className="row row-content">
           <div className="col-12 col-md-6 order-last order-md-first">
-            <img src="../assets/images/mission.jpg" alt="iris picture" className="img-fluid img-thumbnail" />
+            <img src="../assets/images/mission.jpg" alt="mission" className="img-fluid img-thumbnail" />
         </div>
         <div className="col-12 col-md-6">
           <h3>Mission</h3>
@@ -39,7 +39,7 @@ class About extends Component {
           <p id="dateActInstructions">If you remember only one thing, remember <strong>"Yes and ..."</strong>. When creating a base reality you will always say yes and ... to the other persons creations. <strong>Never</strong> deny the reality your partner creates, but you may deny things that occur in the reality. Start by establishing base reality with <strong>who, where, what your doing</strong>. This will be easier since you will be on a real date, but the rest is creations. </p><p>You can take your reality to the next level by <strong>finding the wierd thing</strong>, something that seems odd, and then focus on that thing. You want to use that wierd thing and every once in a while bring it back, but <strong>don't kill it</strong> by going constantly talking about it. Just every few moments bring it back.</p>
         </div>
         <div className="col-12 col-md-6">
-          <img src="../assets/images/rules.jpg" alt="iris picture" className="img-fluid img-thumbnail" />
+          <img src="../assets/images/rules.jpg" alt="rules" className="img-fluid img-thumbnail" />
         </div>
       </div>
     </div>
