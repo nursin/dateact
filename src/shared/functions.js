@@ -13,10 +13,10 @@ export function generateName(gender, maleNames, femaleNames, unisexNames, lastNa
 }
 
 export function generateAge(ageRange) {
-  if (ageRange == '10-18') {
-    return Math.floor(Math.random() * (18 - 10) + 10);
-  } else if (ageRange == '19-29'){
-    return Math.floor(Math.random() * (29 - 19) + 19);
+  if (ageRange == '10-19') {
+    return Math.floor(Math.random() * (19 - 10) + 10);
+  } else if (ageRange == '20-29'){
+    return Math.floor(Math.random() * (29 - 20) + 20);
   } else if (ageRange == '30-39'){
     return Math.floor(Math.random() * (39 - 30) + 30);
   } else if (ageRange == '40-49'){
@@ -49,4 +49,12 @@ export function generateBIO() {
 
 export function generateAdjectives(positive, negative) {
   return positive[Math.floor(Math.random()*positive.length)].positive + "/" + negative[Math.floor(Math.random()*negative.length)].negative;
+}
+
+export function generateQuirkyFact(quirkyFacts) {
+  return quirkyFacts[Math.floor(Math.random()*quirkyFacts.length)].quirkyFact;
+}
+
+export function generateProfession(professions) {
+  return professions[Math.floor(Math.random()*professions.length)].profession; 
 }
