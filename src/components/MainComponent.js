@@ -10,7 +10,9 @@ import Profile from './ProfileReadyComponent';
 // import CreateChar from './CreateCharFormComponent';
 import { NAMES_MALE, UNISEX_NAMES, NAMES_FEMALE, LAST_NAMES } from '../shared/names';
 import { HOROSCOPE } from '../shared/horoscopes';
-import { generateName, generateAge, randomHoroscope } from '../shared/functions';
+import { POSITIVE_ADJECTIVE_LIST, NEGATIVE_ADJECTIVE_LIST} from '../shared/adjectives';
+import { generateName, generateAge, randomHoroscope, generateBIO, generateAdjectives } from '../shared/functions';
+
 
 class Main extends Component {
   constructor(props) {
@@ -21,7 +23,11 @@ class Main extends Component {
       femaleNames: NAMES_FEMALE,
       unisexNames: UNISEX_NAMES,
       lastNames: LAST_NAMES,
-      horoscopes: HOROSCOPE
+      horoscopes: HOROSCOPE,
+      adjectives: {
+        positive: POSITIVE_ADJECTIVE_LIST,
+        negative: NEGATIVE_ADJECTIVE_LIST
+      }
     };
   }
 
@@ -29,12 +35,11 @@ class Main extends Component {
     console.log('Name:', generateName('unisex', this.state.maleNames, this.state.femaleNames, this.state.unisexNames, this.state.lastNames));
     console.log('Age:', generateAge(10-19));
     console.log('Horoscope:', randomHoroscope(this.state.horoscopes));
-    console.log('Type:');
-    console.log('Bio:');
-    console.log('Adjectives:');
+    console.log('Type: Not Famous');
+    console.log('Bio:', generateBIO());
+    console.log('Adjectives:', generateAdjectives(this.state.adjectives.positive, this.state.adjectives.negative));
     console.log('Quirky fact:');
     console.log('Profession:');
-
 
     const HomePage = () => {
       return (
