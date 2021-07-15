@@ -8,11 +8,34 @@ import Footer from './FooterComponent';
 import RenderChooseFeaturesForm from './ChooseFeaturesFormComponent'
 import Profile from './ProfileReadyComponent';
 // import CreateChar from './CreateCharFormComponent';
-
+import { NAMES_MALE, UNISEX_NAMES, NAMES_FEMALE, LAST_NAMES } from '../shared/names';
+import { HOROSCOPE } from '../shared/horoscopes';
+import { generateName, generateAge, randomHoroscope } from '../shared/functions';
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      maleNames: NAMES_MALE,
+      femaleNames: NAMES_FEMALE,
+      unisexNames: UNISEX_NAMES,
+      lastNames: LAST_NAMES,
+      horoscopes: HOROSCOPE
+    };
+  }
+
   render() {
-    
+    console.log('Name:', generateName('unisex', this.state.maleNames, this.state.femaleNames, this.state.unisexNames, this.state.lastNames));
+    console.log('Age:', generateAge(10-19));
+    console.log('Horoscope:', randomHoroscope(this.state.horoscopes));
+    console.log('Type:');
+    console.log('Bio:');
+    console.log('Adjectives:');
+    console.log('Quirky fact:');
+    console.log('Profession:');
+
+
     const HomePage = () => {
       return (
         <Home />
@@ -33,7 +56,7 @@ class Main extends Component {
 
     const RenderChooseFeaturesFormPage = () => {
       return (
-        <RenderChooseFeaturesForm />
+        <RenderChooseFeaturesForm data={this.state}/>
       );
     }
     

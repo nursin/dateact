@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { NAMES_MALE } from '../shared/data';
 import { Card, CardHeader, CardBody, Label, Row, Col, Button } from 'reactstrap';
 // import { Link, withRouter } from 'react-router-dom';
 import { Control, LocalForm} from 'react-redux-form';
+
+// const name = NAMES_MALE.filter(name => NAMES_MALE[Math.floor(Math.random()*NAMES_MALE.length)].name)
 
 class RenderChooseFeaturesForm extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class RenderChooseFeaturesForm extends Component {
     this.state = {
       charGender: '',
       charAge: '',
-      charType: '',
+      charType: ''
       // touched: {
       //   charGender: false,
       //   charAge: false,
@@ -23,12 +24,14 @@ class RenderChooseFeaturesForm extends Component {
 
   handleSubmit (values) {
     console.log("Current state is: " + JSON.stringify(values));
-    alert("Current state is: " + JSON.stringify(values)); 
+
+    console.log("Gender:", values.charGender)
+    console.log("Age:", values.charAge) 
+    console.log("Type:", values.charType) 
   }
 
-
   render() {
-    console.log("Name:", NAMES_MALE[Math.floor(Math.random()*NAMES_MALE.length)])
+
     return (
       <div className="container">
         <div className="row row-content">
