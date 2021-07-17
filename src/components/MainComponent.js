@@ -7,7 +7,8 @@ import Home from './HomeComponent';
 import About from './AboutComponent';
 import Contact from './ContactComponent';
 import Footer from './FooterComponent';
-import RenderChooseFeaturesForm from './ChooseFeaturesFormComponent'
+import RenderChooseFeaturesForm from './ChooseFeaturesFormComponent';
+import CreateChar from './CreateCharFormComponent';
 import Profile from './ProfileReadyComponent';
 // import CreateChar from './CreateCharFormComponent';
 import { NAMES_MALE, UNISEX_NAMES, NAMES_FEMALE, LAST_NAMES } from '../shared/names';
@@ -38,7 +39,16 @@ class Main extends Component {
         charAge: '',
         charType: ''
       },
-      changePage: false
+      profile: {
+        name: 'Bobby',
+        age: '34',
+        horoscope: 'Pisces',
+        type:'Not Famous',
+        bio: 'grew up in a small town',
+        adjectives: 'Intelligent/Bad Listener',
+        quirkyFact: 'Spend alot of time programming',
+        profession: 'Nurse/Programmer/Entreprenuer/Engineer'
+      }
     };
         
     this.setChanged = this.setChanged.bind(this)
@@ -51,6 +61,16 @@ class Main extends Component {
         charGender: values.charGender,
         charAge: values.charAge,
         charType: values.charType
+      },
+      profile: {
+        name: values.createName,
+        age: values.createAge,
+        horoscope: values.createHoroscope,
+        type: values.charType,
+        bio: values.createBio,
+        adjectives: values.createAdjectives,
+        quirkyFact: values.createQuirkyFact,
+        profession: values.createProfession
       }
      });
   }
@@ -59,41 +79,37 @@ class Main extends Component {
 
     const HomePage = () => {
       return (
-        <Fade in>
         <Home />
-        </Fade>
       );
     }
 
     const AboutPage = () => {
       return (
-        <Fade in>
         <About />
-        </Fade>
       );
     }
 
     const ContactPage = () => {
       return (
-        <Fade in>
         <Contact />
-        </Fade>
       );
     }
 
     const RenderChooseFeaturesFormPage = () => {
       return (
-        <Fade in>
         <RenderChooseFeaturesForm data={this.state} setChanged={this.setChanged}/>
-        </Fade>
+      );
+    }
+
+    const RenderCreateCharFormPage = () => {
+      return (
+        <CreateChar data={this.state} setChanged={this.setChanged}/>
       );
     }
     
     const ProfileReadyComponentPage = () => {
       return (
-        <Fade in>
         <Profile data={this.state} setChanged={this.setChanged} />
-        </Fade>
       );
     }
 
@@ -105,6 +121,7 @@ class Main extends Component {
           <Route path='/aboutus' component={AboutPage} />
           <Route path='/contactus' component={ContactPage} />
           <Route path='/choosefeaturesform' component={RenderChooseFeaturesFormPage} />
+          <Route path='/createchar' component={RenderCreateCharFormPage} />
           <Route path='/profileready' component={ProfileReadyComponentPage} />
           <Route path='/restart' component={HomePage} />
           <Redirect to='/home' />

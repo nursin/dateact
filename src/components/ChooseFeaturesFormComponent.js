@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Card, CardHeader, CardBody, Label, Row, Col, Button } from 'reactstrap';
 import { Link, withRouter, Redirect } from 'react-router-dom';
 import { Control, LocalForm} from 'react-redux-form';
-import { Fade } from 'react-animation-components';
-import Profile from './ProfileReadyComponent';
+var changePage = false;
+
 
 
 
@@ -27,7 +27,7 @@ class RenderChooseFeaturesForm extends Component {
   }
 
   handleSubmit (values) {
-    this.props.data.changePage = true
+    changePage = true
     this.props.setChanged(values);
 
     // console.log("Current state is: " + JSON.stringify(values));
@@ -37,8 +37,13 @@ class RenderChooseFeaturesForm extends Component {
   }
 
   redirectToProfile() {
-    if (this.props.data.changePage) {
-    return <Redirect to='/profileready' />
+    console.log(this.props.data.formValues.charType)
+    if (changePage && this.props.data.formValues.charType == 'createYourOwn') {
+      changePage = false;
+      return <Redirect to='/createchar' />
+    } else if (changePage){
+      changePage = false;
+      return <Redirect to='/profileready' />
     }
   }
 

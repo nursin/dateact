@@ -1,8 +1,68 @@
-export function helloWorld(message) {
-  console.log(message)
+export function generateProfile(charType, charData, attributeToShow) {
+  console.log("CharData",charData)
+  if (charType == 'famous'){
+    // run famous profile
+  } else if (charType == 'notFamous'){
+    // run notfamous profile random selection profile
+    if (attributeToShow == 'name'){
+      return generateName(charData.formValues.charGender, charData.maleNames, charData.femaleNames, charData.unisexNames, charData.lastNames)
+    } else if (attributeToShow == 'age'){
+      return generateAge(charData.formValues.charAge)
+    } else if (attributeToShow == 'horoscope'){
+      return randomHoroscope(charData.horoscopes)
+    } else if (attributeToShow == 'type'){
+      return 'Not Famous'
+    } else if (attributeToShow == 'bio'){
+      return generateBIO()
+    } else if (attributeToShow == 'adjectives'){
+      return generateAdjectives(charData.adjectives.positive, charData.adjectives.negative)
+    } else if (attributeToShow == 'quirkyFact'){
+      return generateQuirkyFact(charData.quirkyFacts)
+    } else if (attributeToShow == 'profession'){
+      return generateProfession(charData.professions)
+    }
+  } else if (charType == 'createYourOwn') {
+    // create your own profile form appears
+    if (attributeToShow == 'name'){
+      return charData.profile.name
+    } else if (attributeToShow == 'age'){
+      return charData.profile.age
+    } else if (attributeToShow == 'horoscope'){
+      return charData.profile.horoscope
+    } else if (attributeToShow == 'type'){
+      return 'Create your own'
+    } else if (attributeToShow == 'bio'){
+      return charData.profile.bio
+    } else if (attributeToShow == 'adjectives'){
+      return charData.profile.adjectives
+    } else if (attributeToShow == 'quirkyFact'){
+      return charData.profile.quirkyFact
+    } else if (attributeToShow == 'profession'){
+      return charData.profile.profession
+    }
+  } else {
+    // if no selection on type run notfamous
+    if (attributeToShow == 'name'){
+      return generateName(charData.formValues.charGender, charData.maleNames, charData.femaleNames, charData.unisexNames, charData.lastNames)
+    } else if (attributeToShow == 'age'){
+      return generateAge(charData.formValues.charAge)
+    } else if (attributeToShow == 'horoscope'){
+      return randomHoroscope(charData.horoscopes)
+    } else if (attributeToShow == 'type'){
+      return charData.profile.type
+    } else if (attributeToShow == 'bio'){
+      return generateBIO()
+    } else if (attributeToShow == 'adjectives'){
+      return generateAdjectives(charData.adjectives.positive, charData.adjectives.negative)
+    } else if (attributeToShow == 'quirkyFact'){
+      return generateQuirkyFact(charData.quirkyFacts)
+    } else if (attributeToShow == 'profession'){
+      return generateProfession(charData.professions)
+    }
+  }
 }
 
-export function generateName(gender, maleNames, femaleNames, unisexNames, lastNames) {
+function generateName(gender, maleNames, femaleNames, unisexNames, lastNames) {
   if (gender == 'male') {
     return maleNames[Math.floor(Math.random()*maleNames.length)].name + ' ' + lastNames[Math.floor(Math.random()*lastNames.length)].name;
   } else if (gender == 'female') {
@@ -14,7 +74,7 @@ export function generateName(gender, maleNames, femaleNames, unisexNames, lastNa
   }
 }
 
-export function generateAge(ageRange) {
+function generateAge(ageRange) {
   if (ageRange == '10-19') {
     return Math.floor(Math.random() * (19 - 10) + 10);
   } else if (ageRange == '20-29'){
@@ -32,11 +92,11 @@ export function generateAge(ageRange) {
   }
 }
 
-export function randomHoroscope(horoscopes) {
+function randomHoroscope(horoscopes) {
   return horoscopes[Math.floor(Math.random()*horoscopes.length)].horoscope;
 }
 
-export function generateBIO() {
+function generateBIO() {
   const GREW_UP_IN = ['small', 'large', 'jungle'];
   const LIKES = ['cats', 'dogs', 'tigers', 'peanuts', 'cilantro'];
   const OWNS_A = ['house', 'cat', 'dog', 'robot', 'boat', 'hospital', 'business'];
@@ -49,14 +109,14 @@ export function generateBIO() {
   // 'Movies','TV','Religion','Music','Sports','Books','Politics'
 }
 
-export function generateAdjectives(positive, negative) {
+function generateAdjectives(positive, negative) {
   return positive[Math.floor(Math.random()*positive.length)].positive + "/" + negative[Math.floor(Math.random()*negative.length)].negative;
 }
 
-export function generateQuirkyFact(quirkyFacts) {
+function generateQuirkyFact(quirkyFacts) {
   return quirkyFacts[Math.floor(Math.random()*quirkyFacts.length)].quirkyFact;
 }
 
-export function generateProfession(professions) {
+function generateProfession(professions) {
   return professions[Math.floor(Math.random()*professions.length)].profession; 
 }
