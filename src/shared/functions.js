@@ -7,8 +7,10 @@ export function generateName(gender, maleNames, femaleNames, unisexNames, lastNa
     return maleNames[Math.floor(Math.random()*maleNames.length)].name + ' ' + lastNames[Math.floor(Math.random()*lastNames.length)].name;
   } else if (gender == 'female') {
     return femaleNames[Math.floor(Math.random()*femaleNames.length)].name + ' ' + lastNames[Math.floor(Math.random()*lastNames.length)].name;
-  } else {
+  } else if (gender == 'unisex') {
     return unisexNames[Math.floor(Math.random()*unisexNames.length)].name + ' ' + lastNames[Math.floor(Math.random()*lastNames.length)].name;
+  } else {
+    return maleNames[Math.floor(Math.random()*maleNames.length)].name + ' ' + lastNames[Math.floor(Math.random()*lastNames.length)].name;
   }
 }
 

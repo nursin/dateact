@@ -1,12 +1,16 @@
 import React from 'react';
 import { Card, CardHeader, CardBody } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { Fade } from 'react-animation-components';
 
 
 function Home(props) {
-  function RenderInstructionsCard() {
+
+
+  // remove data for a generic card where info will change upon button clicks
+  function RenderCard() {
     return(
-      
+
         <Card className="card custom-card">
           <CardHeader className="bg-gradient" >
           <h3 className="text-center text-white" >Date Act Instructions</h3>
@@ -17,6 +21,7 @@ function Home(props) {
             </Link>
           </CardBody>
         </Card>
+
     );
   }
   // choosefeaturesform
@@ -25,7 +30,7 @@ function Home(props) {
     <div className="container">
       <div className="row row-content">
         <div className="col">
-          <RenderInstructionsCard />
+          <RenderCard />
         </div>
       </div>
     </div> 

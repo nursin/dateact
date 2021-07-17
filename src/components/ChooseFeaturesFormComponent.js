@@ -1,33 +1,45 @@
 import React, { Component } from 'react';
 import { Card, CardHeader, CardBody, Label, Row, Col, Button } from 'reactstrap';
-// import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 import { Control, LocalForm} from 'react-redux-form';
+import { Fade } from 'react-animation-components';
+import Profile from './ProfileReadyComponent';
+
+
 
 // const name = NAMES_MALE.filter(name => NAMES_MALE[Math.floor(Math.random()*NAMES_MALE.length)].name)
+
 
 class RenderChooseFeaturesForm extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      charGender: '',
-      charAge: '',
-      charType: ''
       // touched: {
       //   charGender: false,
       //   charAge: false,
       //   charType: false
-      // }
+      // },
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.redirectToProfile = this.redirectToProfile.bind(this);
+
   }
 
   handleSubmit (values) {
-    console.log("Current state is: " + JSON.stringify(values));
+    this.props.data.changePage = true
+    this.props.setChanged(values);
 
-    console.log("Gender:", values.charGender)
-    console.log("Age:", values.charAge) 
-    console.log("Type:", values.charType) 
+    // console.log("Current state is: " + JSON.stringify(values));
+    // console.log("Gender:", values.charGender)
+    // console.log("Age:", values.charAge) 
+    // console.log("Type:", values.charType) 
+  }
+
+  redirectToProfile() {
+    if (this.props.data.changePage) {
+    return <Redirect to='/profileready' />
+    }
   }
 
   render() {
@@ -59,8 +71,8 @@ class RenderChooseFeaturesForm extends Component {
                   <Col className="col-lg-9">
                     <Control.select model=".charAge" id="charAge" className="form-control" name="charAge">
                       <option selected disabled>Select...</option>
-                      <option value="10-18">10 - 18</option>
-                      <option value="19-29">19 - 29</option>
+                      <option value="10-19">10 - 19</option>
+                      <option value="20-29">20 - 29</option>
                       <option value="30-39">30 - 39</option>
                       <option value="40-49">40 - 49</option>
                       <option value="50-59">50 - 59</option>
@@ -81,7 +93,7 @@ class RenderChooseFeaturesForm extends Component {
                 </Row>
                 <Row className="form-group mt-4">
                   <Col>
-                    <Button type="submit" to="/profileready" className="col btn btn-lg text-white bg-blue button-hover-bg-gradient">
+                    <Button type="submit" className="col btn btn-lg text-white bg-blue button-hover-bg-gradient">
                       <i className="fa fa-transgender-alt fa-lg" /> Generate
                     </Button>
                   </Col>
@@ -89,6 +101,7 @@ class RenderChooseFeaturesForm extends Component {
               </LocalForm>
               </CardBody>
             </Card>
+            {this.redirectToProfile()}
           </div>
         </div>
       </div>

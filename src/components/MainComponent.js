@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { Fade } from 'react-animation-components';
+
 import Header from './HeaderComponent'
 import Home from './HomeComponent';
 import About from './AboutComponent';
@@ -13,7 +15,6 @@ import { HOROSCOPE } from '../shared/horoscopes';
 import { POSITIVE_ADJECTIVE_LIST, NEGATIVE_ADJECTIVE_LIST} from '../shared/adjectives';
 import { QUIRKY_FACT } from '../shared/quirky-fact';
 import { PROFESSION } from '../shared/profession';
-import { generateName, generateAge, randomHoroscope, generateBIO, generateAdjectives, generateQuirkyFact, generateProfession } from '../shared/functions';
 
 
 class Main extends Component {
@@ -31,48 +32,68 @@ class Main extends Component {
         negative: NEGATIVE_ADJECTIVE_LIST
       },
       quirkyFacts: QUIRKY_FACT,
-      professions: PROFESSION 
+      professions: PROFESSION,
+      formValues: {
+        charGender: '',
+        charAge: '',
+        charType: ''
+      },
+      changePage: false
     };
+        
+    this.setChanged = this.setChanged.bind(this)
+
+  }
+
+  setChanged(values) {
+    this.setState({
+      formValues: {
+        charGender: values.charGender,
+        charAge: values.charAge,
+        charType: values.charType
+      }
+     });
   }
 
   render() {
-    console.log('Name:', generateName('unisex', this.state.maleNames, this.state.femaleNames, this.state.unisexNames, this.state.lastNames));
-    console.log('Age:', generateAge('10-19'));
-    console.log('Horoscope:', randomHoroscope(this.state.horoscopes));
-    console.log('Type: Not Famous');
-    console.log('Bio:', generateBIO());
-    console.log('Adjectives:', generateAdjectives(this.state.adjectives.positive, this.state.adjectives.negative));
-    console.log('Quirky fact:', generateQuirkyFact(this.state.quirkyFacts));
-    console.log('Profession:', generateProfession(this.state.professions));
-
 
     const HomePage = () => {
       return (
+        <Fade in>
         <Home />
+        </Fade>
       );
     }
 
     const AboutPage = () => {
       return (
+        <Fade in>
         <About />
+        </Fade>
       );
     }
 
     const ContactPage = () => {
       return (
+        <Fade in>
         <Contact />
+        </Fade>
       );
     }
 
     const RenderChooseFeaturesFormPage = () => {
       return (
-        <RenderChooseFeaturesForm data={this.state}/>
+        <Fade in>
+        <RenderChooseFeaturesForm data={this.state} setChanged={this.setChanged}/>
+        </Fade>
       );
     }
     
     const ProfileReadyComponentPage = () => {
       return (
-        <Profile />
+        <Fade in>
+        <Profile data={this.state} setChanged={this.setChanged} />
+        </Fade>
       );
     }
 
