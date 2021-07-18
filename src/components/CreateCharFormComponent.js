@@ -95,8 +95,10 @@ class CreateChar extends Component {
                       </Control.text>
                   </div>
                   <div className="form-group mt-4">
+                    <div className="col btn-group">
                       <Button type="submit" className="btn btn-lg text-white bg-blue button-hover-bg-gradient"><i className="fa fa-transgender-alt fa-lg"></i> Create</Button>
                       <Link to='/choosefeaturesform' role="button" className="btn btn-secondary btn-lg">Back</Link>
+                    </div>
                   </div>
                 </LocalForm>
               </CardBody>
