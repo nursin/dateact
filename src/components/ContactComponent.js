@@ -20,19 +20,19 @@ class Contact extends Component {
 
                 <form>
                   <div className="form-group row">
-                    <label for="firstName" className="col-md-2 col-form-label">First Name</label>
+                    <label htmlFor="firstName" className="col-md-2 col-form-label">First Name</label>
                     <div className="col-md-10">
                       <input className="form-control" type="text" id="firstName" name="firstName" placeholder="First Name" />
                     </div>
                   </div>
                   <div className="form-group row">
-                    <label for="lastName" className="col-md-2 col-form-label">Last Name</label>
+                    <label htmlFor="lastName" className="col-md-2 col-form-label">Last Name</label>
                     <div className="col-md-10">
                       <input className="form-control" type="text" id="lastName" name="lastName" placeholder="Last Name" />
                     </div>
                   </div>
                   <div className="form-group row">
-                    <label for="areaCode" className="col-md-2 col-form-label">Contact Tel.</label>
+                    <label htmlFor="areaCode" className="col-md-2 col-form-label">Contact Tel.</label>
                     <div className="col-5 col-md-3">
                       <input className="form-control" type="tel" id="areaCode" name="areaCode" placeholder="Area Code" />
                     </div>
@@ -41,7 +41,7 @@ class Contact extends Component {
                     </div>
                   </div>
                   <div className="form-group row">
-                    <label for="email" className="col-md-2 col-form-label">Email</label>
+                    <label htmlFor="email" className="col-md-2 col-form-label">Email</label>
                     <div className="col-md-10">
                       <input className="form-control" type="email" id="email" name="email" placeholder="Email" />
                     </div>
@@ -51,16 +51,16 @@ class Contact extends Component {
                       May we contact you?
                       <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" id="contactYes" name="contactRadios" value="yes" />
-                        <label className="form-check-label" for="contactYes">Yes</label>
+                        <label className="form-check-label" htmlFor="contactYes">Yes</label>
                       </div>
                       <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" id="contactNo" name="contactRadios" value="no" />
-                        <label className="form-check-label" for="contactNo">No</label>
+                        <label className="form-check-label" htmlFor="contactNo">No</label>
                       </div>
                     </div>
                   </div>
                   <div className="form-group row">
-                    <label for="feedback" className="col-md-2 col-form-label">Your Feedback</label>
+                    <label htmlFor="feedback" className="col-md-2 col-form-label">Your Feedback</label>
                     <div className="col-md-10">
                       <textarea className="form-control" id="feedback" name="feedback" rows="8"></textarea>
                     </div>

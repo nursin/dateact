@@ -72,19 +72,19 @@ class Header extends Component {
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader className="bg-gradient text-center" toggle={this.toggleModal}><h2 className="text-white">Share on social media</h2></ModalHeader>
           <ModalBody>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-12 text-center">
-                  <a href="http://facebook.com/" class="btn button-hover-bg-gradient bg-blue text-white" target="_blank">Share on <i class="fa fa-facebook fa-2x"></i>acebook</a>
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-12 text-center">
+                  <a href="http://facebook.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noopener">Share on <i className="fa fa-facebook fa-2x"></i>acebook</a>
                 </div>
-                <div class="col-12 text-center mt-2">
-                  <a href="http://twitter.com/" class="btn button-hover-bg-gradient bg-blue text-white" target="_blank">Share on <i class="fa fa-twitter fa-2x"></i>Twitter</a>
+                <div className="col-12 text-center mt-2">
+                  <a href="http://twitter.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noopener">Share on <i className="fa fa-twitter fa-2x"></i>Twitter</a>
                 </div>
-                <div class="col-12 text-center mt-2">
-                  <a href="http://instagram.com/" class="btn button-hover-bg-gradient bg-blue text-white" target="_blank">Share on <i class="fa fa-instagram fa-2x"></i> Instagram</a>
+                <div className="col-12 text-center mt-2">
+                  <a href="http://instagram.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noopener">Share on <i className="fa fa-instagram fa-2x"></i> Instagram</a>
                 </div>
-                <div class="col-12 text-center mt-2">
-                  <a href="http://youtube.com/" class="btn button-hover-bg-gradient bg-blue text-white" target="_blank">Share on <i class="fa fa-youtube fa-2x"></i> YouTube</a>
+                <div className="col-12 text-center mt-2">
+                  <a href="http://youtube.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noopener">Share on <i className="fa fa-youtube fa-2x"></i> YouTube</a>
                 </div>
               </div>
             </div>
