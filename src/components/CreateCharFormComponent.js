@@ -54,38 +54,38 @@ class CreateChar extends Component {
                 <LocalForm onSubmit={values => this.handleSubmit(values)}>
                   <div className="form-group">
                     <Label htmlFor="createName">Name</Label>
-                      <Control.Text id="createName" model=".createName" className="form-control" name="createName">
-                      </Control.Text>
+                      <Control.text id="createName" model=".createName" className="form-control" name="createName">
+                      </Control.text>
                   </div>
                   <div className="form-group">
                     <Label htmlFor="createAge">Age</Label>
-                      <Control.Text id="createAge" model=".createAge" className="form-control" name="createAge">
-                      </Control.Text>
+                      <Control.text id="createAge" model=".createAge" className="form-control" name="createAge">
+                      </Control.text>
                   </div>
                   <div className="form-group">
                     <Label htmlFor="createHoroscope">Horoscope</Label>
-                      <Control.Text id="createHoroscope" model=".createHoroscope" className="form-control" name="createHoroscope" >
-                      </Control.Text>
+                      <Control.text id="createHoroscope" model=".createHoroscope" className="form-control" name="createHoroscope" >
+                      </Control.text>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createBio">Bio</Label>
-                      <Control.Textarea id="createBio" model=".createBio" className="form-control" name="createBio" rows="5">
-                      </Control.Textarea>
+                      <Control.textarea id="createBio" model=".createBio" className="form-control" name="createBio" rows="5">
+                      </Control.textarea>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createAdjectives">Adjectives</Label>
-                      <Control.Text id="createAdjectives" model=".createAdjectives" className="form-control" name="createAdjectives">
-                      </Control.Text>
+                      <Control.text id="createAdjectives" model=".createAdjectives" className="form-control" name="createAdjectives">
+                      </Control.text>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createQuirkyFact">Quirky Fact</Label>
-                      <Control.Text id="createQuirkyFact" model=".createQuirkyFact" className="form-control" name="createQuirkyFact">
-                      </Control.Text>
+                      <Control.text id="createQuirkyFact" model=".createQuirkyFact" className="form-control" name="createQuirkyFact">
+                      </Control.text>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createProfession">Profession</Label>
-                      <Control.Text id="createProfession" model=".createProfession" className="form-control" name="createProfession">
-                      </Control.Text>
+                      <Control.text id="createProfession" model=".createProfession" className="form-control" name="createProfession">
+                      </Control.text>
                   </div>
                   <div className="form-group mt-4">
                       <Button type="submit" className="btn btn-lg text-white bg-blue button-hover-bg-gradient"><i className="fa fa-transgender-alt fa-lg"></i> Create</Button>
