@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import { generateProfile } from '../shared/functions';
 var randomFamousPerson = 1;
 class Profile extends Component {
-  constructor(props) {
-    super(props);
-    // sets change/page to false so charform will load after instructions page
-  }
 
   randomFamousPerson () {
     if (this.props.data.formValues.charGender == 'male') {

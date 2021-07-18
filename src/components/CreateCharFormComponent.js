@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardHeader, CardBody, Label, Row, Col, Button } from 'reactstrap';
-import { Link, withRouter, Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { Control, LocalForm} from 'react-redux-form';
 var changePage = false;
 
@@ -55,50 +55,50 @@ class CreateChar extends Component {
                   <Row className="form-group row">
                     <Label className="col-lg-3" htmlFor="createName">Name</Label>
                     <Col className="col-lg-9">
-                      <Control.text model=".createName" className="form-control" name="createName" id="createName">
-                      </Control.text>
+                      <Control.Text model=".createName" className="form-control" name="createName" id="createName">
+                      </Control.Text>
                     </Col>
                   </Row>
                   <Row className="form-group">
                     <Label className="col-lg-3" htmlFor="createAge">Age</Label>
                     <Col className="col-lg-9">
-                      <Control.text model=".createAge" className="form-control" name="createAge" id="createAge">
-                      </Control.text>
+                      <Control.Text model=".createAge" className="form-control" name="createAge" id="createAge">
+                      </Control.Text>
                     </Col>
                   </Row>
                   <Row className="form-group">
                     <Label className="col-lg-3" htmlFor="createHoroscope">Horoscope</Label>
                     <Col className="col-lg-9">
-                      <Control.text model=".createHoroscope" className="form-control" name="createHoroscope" id="createHoroscope">
-                      </Control.text>
+                      <Control.Text model=".createHoroscope" className="form-control" name="createHoroscope" id="createHoroscope">
+                      </Control.Text>
                     </Col>
                   </Row>
                   <Row className="form-group">
                     <Label className="col-lg-3" htmlFor="createBio">Bio</Label>
                     <Col className="col-lg-9">
-                      <Control.textarea model=".createBio" className="form-control" name="createBio" id="createBio" rows="5">
-                      </Control.textarea>
+                      <Control.Textarea model=".createBio" className="form-control" name="createBio" id="createBio" rows="5">
+                      </Control.Textarea>
                     </Col>
                   </Row>
                   <Row className="form-group">
                     <Label className="col-lg-3" htmlFor="createAdjectives">Adjectives</Label>
                     <Col className="col-lg-9">
-                      <Control.text model=".createAdjectives" className="form-control" name="createAdjectives" id="createAdjectives">
-                      </Control.text>
+                      <Control.Text model=".createAdjectives" className="form-control" name="createAdjectives" id="createAdjectives">
+                      </Control.Text>
                     </Col>
                   </Row>
                   <Row className="form-group">
                     <Label className="col-lg-3" htmlFor="createQuirkyFact">Quirky Fact</Label>
                     <Col className="col-lg-9">
-                      <Control.text model=".createQuirkyFact" className="form-control" name="createQuirkyFact" id="createQuirkyFact">
-                      </Control.text>
+                      <Control.Text model=".createQuirkyFact" className="form-control" name="createQuirkyFact" id="createQuirkyFact">
+                      </Control.Text>
                     </Col>
                   </Row>
                   <Row className="form-group">
                     <Label className="col-lg-3" htmlFor="createProfession">Profession</Label>
                     <Col className="col-lg-9">
-                      <Control.text model=".createProfession" className="form-control" name="createProfession" id="createProfession">
-                      </Control.text>
+                      <Control.Text model=".createProfession" className="form-control" name="createProfession" id="createProfession">
+                      </Control.Text>
                     </Col>
                   </Row>
                   <Row className="form-group mt-4">

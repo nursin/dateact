@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, Jumbotron, Button, Collapse, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Nav, Navbar, NavbarToggler, NavItem, Jumbotron, Button, Collapse, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -30,7 +30,7 @@ class Header extends Component {
         <Jumbotron fluid>
           <div className="container">
             <div className="row">
-              <div class="col-12 col-sm-2 col-lg-1 mb-3 mb-sm-0 text-center align-self-center">
+              <div className="col-12 col-sm-2 col-lg-1 mb-3 mb-sm-0 text-center align-self-center">
                 <a id="logo" href="index.html"><i className="fa fa-transgender-alt fa-5x"/></a>
               </div>
               <div className="col ml-sm-4 ml-md-0 ml-lg-4 ml-xl-0 text-center text-sm-left">
@@ -38,7 +38,7 @@ class Header extends Component {
                 <h2 id="slogan">Spice up your date life</h2>
               </div>
               {/* <!-- This button will open a share modal so the user can select messages, social, email and such --> */}
-              <span class="col-md-4 col-xl-2 mt-4 text-center">
+              <span className="col-md-4 col-xl-2 mt-4 text-center">
                 <Button className="btn btn-warning btn-lg text-black" outline onClick={this.toggleModal}>Share With Friends</Button>
               </span>
             </div>

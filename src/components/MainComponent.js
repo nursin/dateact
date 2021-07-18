@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { Fade } from 'react-animation-components';
+import { connect } from 'react-redux';
 
 import Header from './HeaderComponent'
 import Home from './HomeComponent';
@@ -99,13 +99,13 @@ class Main extends Component {
       );
     }
 
-    const RenderChooseFeaturesFormPage = () => {
+    const ChooseFeaturesFormPage = () => {
       return (
         <RenderChooseFeaturesForm data={this.state} setChanged={this.setChanged}/>
       );
     }
 
-    const RenderCreateCharFormPage = () => {
+    const CreateCharFormPage = () => {
       return (
         <CreateChar data={this.state} setChanged={this.setChanged}/>
       );
@@ -124,8 +124,8 @@ class Main extends Component {
           <Route path='/home' component={HomePage} />
           <Route path='/aboutus' component={AboutPage} />
           <Route path='/contactus' component={ContactPage} />
-          <Route path='/choosefeaturesform' component={RenderChooseFeaturesFormPage} />
-          <Route path='/createchar' component={RenderCreateCharFormPage} />
+          <Route path='/choosefeaturesform' component={ChooseFeaturesFormPage} />
+          <Route path='/createchar' component={CreateCharFormPage} />
           <Route path='/profileready' component={ProfileReadyComponentPage} />
           <Route path='/restart' component={HomePage} />
           <Redirect to='/home' />
