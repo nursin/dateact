@@ -22,7 +22,7 @@ class CreateChar extends Component {
   }
 
   handleSubmit (values) {
-    console.log("Current state is: " + JSON.stringify(values));
+    // console.log("Current state is: " + JSON.stringify(values));
     changePage = true;
     this.props.setChanged(values);
 
@@ -33,7 +33,7 @@ class CreateChar extends Component {
   }
 
   redirectToProfile() {
-    console.log(changePage)
+    // console.log(changePage)
     if (changePage) {
       changePage = false;
       this.props.data.profile.type = 'createYourOwn'
@@ -43,7 +43,7 @@ class CreateChar extends Component {
   }
 
   render() {
-    console.log("Data", this.props.data)
+    // console.log("Data", this.props.data)
     return (
       <div className="container">
         <div className="row row-content">

@@ -1,5 +1,5 @@
 export function generateProfile(charType, charData, attributeToShow, randomFamousPerson) {
-  console.log("CharData",charData)
+  // console.log("CharData",charData)
   let gender;
   if (charType == 'famous'){
     // run famous profile
@@ -77,7 +77,7 @@ export function generateProfile(charType, charData, attributeToShow, randomFamou
     } else if (attributeToShow == 'horoscope'){
       return randomHoroscope(charData.horoscopes)
     } else if (attributeToShow == 'type'){
-      return charData.profile.type
+      return 'Not Famous (default)'
     } else if (attributeToShow == 'bio'){
       return generateBIO()
     } else if (attributeToShow == 'adjectives'){
