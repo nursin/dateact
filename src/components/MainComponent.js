@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
 
 import Header from './HeaderComponent'
 import Home from './HomeComponent';

@@ -75,16 +75,16 @@ class Header extends Component {
             <div className="container-fluid">
               <div className="row">
                 <div className="col-12 text-center">
-                  <a href="http://facebook.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noopener">Share on <i className="fa fa-facebook fa-2x"></i>acebook</a>
+                  <a href="http://facebook.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noreferrer">Share on <i className="fa fa-facebook fa-2x"></i>acebook</a>
                 </div>
                 <div className="col-12 text-center mt-2">
-                  <a href="http://twitter.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noopener">Share on <i className="fa fa-twitter fa-2x"></i>Twitter</a>
+                  <a href="http://twitter.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noreferrer">Share on <i className="fa fa-twitter fa-2x"></i>Twitter</a>
                 </div>
                 <div className="col-12 text-center mt-2">
-                  <a href="http://instagram.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noopener">Share on <i className="fa fa-instagram fa-2x"></i> Instagram</a>
+                  <a href="http://instagram.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noreferrer">Share on <i className="fa fa-instagram fa-2x"></i> Instagram</a>
                 </div>
                 <div className="col-12 text-center mt-2">
-                  <a href="http://youtube.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noopener">Share on <i className="fa fa-youtube fa-2x"></i> YouTube</a>
+                  <a href="http://youtube.com/" className="btn button-hover-bg-gradient bg-blue text-white" target="_blank" rel="noreferrer">Share on <i className="fa fa-youtube fa-2x"></i> YouTube</a>
                 </div>
               </div>
             </div>

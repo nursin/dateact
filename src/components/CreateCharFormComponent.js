@@ -52,61 +52,45 @@ class CreateChar extends Component {
               <CardHeader className="bg-gradient"><h2 className="text-white text-center">Create your character</h2></CardHeader>
               <CardBody>
                 <LocalForm onSubmit={values => this.handleSubmit(values)}>
-                  <Row className="form-group row">
+                  <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createName">Name</Label>
-                    <Col className="col-lg-9">
-                      <Control.Text model=".createName" className="form-control" name="createName" id="createName">
-                      </Control.Text>
-                    </Col>
-                  </Row>
-                  <Row className="form-group">
+                      <Control.text model=".createName" className="form-control" name="createName" id="createName">
+                      </Control.text>
+                  </div>
+                  <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createAge">Age</Label>
-                    <Col className="col-lg-9">
-                      <Control.Text model=".createAge" className="form-control" name="createAge" id="createAge">
-                      </Control.Text>
-                    </Col>
-                  </Row>
-                  <Row className="form-group">
+                      <Control.text model=".createAge" className="form-control" name="createAge" id="createAge">
+                      </Control.text>
+                  </div>
+                  <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createHoroscope">Horoscope</Label>
-                    <Col className="col-lg-9">
-                      <Control.Text model=".createHoroscope" className="form-control" name="createHoroscope" id="createHoroscope">
-                      </Control.Text>
-                    </Col>
-                  </Row>
-                  <Row className="form-group">
+                      <Control.text model=".createHoroscope" className="form-control" name="createHoroscope" id="createHoroscope">
+                      </Control.text>
+                  </div>
+                  <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createBio">Bio</Label>
-                    <Col className="col-lg-9">
-                      <Control.Textarea model=".createBio" className="form-control" name="createBio" id="createBio" rows="5">
-                      </Control.Textarea>
-                    </Col>
-                  </Row>
-                  <Row className="form-group">
+                      <Control.textarea model=".createBio" className="form-control" name="createBio" id="createBio" rows="5">
+                      </Control.textarea>
+                  </div>
+                  <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createAdjectives">Adjectives</Label>
-                    <Col className="col-lg-9">
-                      <Control.Text model=".createAdjectives" className="form-control" name="createAdjectives" id="createAdjectives">
-                      </Control.Text>
-                    </Col>
-                  </Row>
-                  <Row className="form-group">
+                      <Control.text model=".createAdjectives" className="form-control" name="createAdjectives" id="createAdjectives">
+                      </Control.text>
+                  </div>
+                  <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createQuirkyFact">Quirky Fact</Label>
-                    <Col className="col-lg-9">
-                      <Control.Text model=".createQuirkyFact" className="form-control" name="createQuirkyFact" id="createQuirkyFact">
-                      </Control.Text>
-                    </Col>
-                  </Row>
-                  <Row className="form-group">
+                      <Control.text model=".createQuirkyFact" className="form-control" name="createQuirkyFact" id="createQuirkyFact">
+                      </Control.text>
+                  </div>
+                  <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createProfession">Profession</Label>
-                    <Col className="col-lg-9">
-                      <Control.Text model=".createProfession" className="form-control" name="createProfession" id="createProfession">
-                      </Control.Text>
-                    </Col>
-                  </Row>
-                  <Row className="form-group mt-4">
-                    <Col className="btn-group">
+                      <Control.text model=".createProfession" className="form-control" name="createProfession" id="createProfession">
+                      </Control.text>
+                  </div>
+                  <div className="form-group mt-4">
                       <Button type="submit" className="btn btn-lg text-white bg-blue button-hover-bg-gradient"><i className="fa fa-transgender-alt fa-lg"></i> Create</Button>
                       <Link to='/choosefeaturesform' role="button" className="btn btn-secondary btn-lg">Back</Link>
-                    </Col>
-                  </Row>
+                  </div>
                 </LocalForm>
               </CardBody>
             </Card>
