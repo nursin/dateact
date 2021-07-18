@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardHeader, CardBody, Label, Row, Col, Button } from 'reactstrap';
+import { Card, CardHeader, CardBody, Label, Button } from 'reactstrap';
 import { Link, Redirect } from 'react-router-dom';
 import { Control, LocalForm} from 'react-redux-form';
 var changePage = false;
@@ -53,39 +53,39 @@ class CreateChar extends Component {
               <CardBody>
                 <LocalForm onSubmit={values => this.handleSubmit(values)}>
                   <div className="form-group">
-                    <Label className="col-lg-3" htmlFor="createName">Name</Label>
-                      <Control.text model=".createName" className="form-control" name="createName" id="createName">
-                      </Control.text>
+                    <Label htmlFor="createName">Name</Label>
+                      <Control.Text id="createName" model=".createName" className="form-control" name="createName">
+                      </Control.Text>
                   </div>
                   <div className="form-group">
-                    <Label className="col-lg-3" htmlFor="createAge">Age</Label>
-                      <Control.text model=".createAge" className="form-control" name="createAge" id="createAge">
-                      </Control.text>
+                    <Label htmlFor="createAge">Age</Label>
+                      <Control.Text id="createAge" model=".createAge" className="form-control" name="createAge">
+                      </Control.Text>
                   </div>
                   <div className="form-group">
-                    <Label className="col-lg-3" htmlFor="createHoroscope">Horoscope</Label>
-                      <Control.text model=".createHoroscope" className="form-control" name="createHoroscope" id="createHoroscope">
-                      </Control.text>
+                    <Label htmlFor="createHoroscope">Horoscope</Label>
+                      <Control.Text id="createHoroscope" model=".createHoroscope" className="form-control" name="createHoroscope" >
+                      </Control.Text>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createBio">Bio</Label>
-                      <Control.textarea model=".createBio" className="form-control" name="createBio" id="createBio" rows="5">
-                      </Control.textarea>
+                      <Control.Textarea id="createBio" model=".createBio" className="form-control" name="createBio" rows="5">
+                      </Control.Textarea>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createAdjectives">Adjectives</Label>
-                      <Control.text model=".createAdjectives" className="form-control" name="createAdjectives" id="createAdjectives">
-                      </Control.text>
+                      <Control.Text id="createAdjectives" model=".createAdjectives" className="form-control" name="createAdjectives">
+                      </Control.Text>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createQuirkyFact">Quirky Fact</Label>
-                      <Control.text model=".createQuirkyFact" className="form-control" name="createQuirkyFact" id="createQuirkyFact">
-                      </Control.text>
+                      <Control.Text id="createQuirkyFact" model=".createQuirkyFact" className="form-control" name="createQuirkyFact">
+                      </Control.Text>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createProfession">Profession</Label>
-                      <Control.text model=".createProfession" className="form-control" name="createProfession" id="createProfession">
-                      </Control.text>
+                      <Control.Text id="createProfession" model=".createProfession" className="form-control" name="createProfession">
+                      </Control.Text>
                   </div>
                   <div className="form-group mt-4">
                       <Button type="submit" className="btn btn-lg text-white bg-blue button-hover-bg-gradient"><i className="fa fa-transgender-alt fa-lg"></i> Create</Button>
