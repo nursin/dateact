@@ -3,6 +3,7 @@ import { Card, CardHeader, CardBody, Label, Row, Col, Button } from 'reactstrap'
 import { Link, withRouter, Redirect } from 'react-router-dom';
 import { Control, LocalForm} from 'react-redux-form';
 var changePage = false;
+
 class CreateChar extends Component {
   constructor(props) {
     super(props);

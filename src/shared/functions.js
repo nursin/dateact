@@ -1,4 +1,4 @@
-export function generateProfile(charType, charData, attributeToShow) {
+export function generateProfile(charType, charData, attributeToShow, randomFamousPerson) {
   console.log("CharData",charData)
   let gender;
   if (charType == 'famous'){
@@ -10,11 +10,9 @@ export function generateProfile(charType, charData, attributeToShow) {
     } else if (charData.formValues.charGender == 'androgen' || charData.formValues.charGender == 'neutral') {
       gender = charData.famousUnisex;
     } else {
-      const GENDER_LIST = [charData.famousMales, charData.famousFemales, charData.famousUnisex];
-      gender = GENDER_LIST[Math.floor(Math.random()*GENDER_LIST.length)];
+      gender = [...charData.famousMales, ...charData.famousFemales, ...charData.famousUnisex];
     } 
-    console.log(gender)
-    let randomFamousPerson = Math.floor(Math.random()*gender.length);
+
     if (attributeToShow == 'name'){
       return gender[randomFamousPerson].name
     } else if (attributeToShow == 'age'){
