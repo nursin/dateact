@@ -1,6 +1,6 @@
 export function generateProfile(charType, charData, attributeToShow, randomFamousPerson) {
   // console.log("CharData",charData)
-  let gender;
+  var gender;
   if (charType == 'famous'){
     // run famous profile
     if (charData.formValues.charGender == 'male') {
