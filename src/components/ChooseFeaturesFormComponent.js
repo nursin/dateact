@@ -57,6 +57,7 @@ class RenderChooseFeaturesForm extends Component {
                 <LocalForm onSubmit={values => this.handleSubmit(values)}>
                   <div className='form-group'>
                     <Label htmlFor='charGender'>Gender</Label>
+                      {/* eslint-disable-next-line */}
                       <Control.select id='charGender' model='.charGender' className='form-control' name='charGender'>
                         <option default>Select...</option>
                         <option value='male'>Male</option>
@@ -67,6 +68,7 @@ class RenderChooseFeaturesForm extends Component {
                   </div>
                   <div className='form-group'>
                     <Label htmlFor='charAge'>Age range</Label>
+                    {/* eslint-disable-next-line */}
                       <Control.select id='charAge' model='.charAge' className='form-control' name='charAge'>
                         <option default>Select...</option>
                         <option value='10-19'>10 - 19</option>
@@ -79,6 +81,7 @@ class RenderChooseFeaturesForm extends Component {
                   </div>
                   <div className='form-group'>
                     <Label htmlFor='charType'>Type</Label>
+                    {/* eslint-disable-next-line */}
                       <Control.select id='charType' model='.charType' className='form-control' name='charType'>
                         <option default>Select...</option>
                         <option value='famous'>Famous</option>
