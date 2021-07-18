@@ -1,7 +1,37 @@
 export function generateProfile(charType, charData, attributeToShow) {
   console.log("CharData",charData)
+  let gender;
   if (charType == 'famous'){
     // run famous profile
+    if (charData.formValues.charGender == 'male') {
+      gender = charData.famousMales;
+    } else if (charData.formValues.charGender == 'female') {
+      gender = charData.famousFemales;
+    } else if (charData.formValues.charGender == 'androgen' || charData.formValues.charGender == 'neutral') {
+      gender = charData.famousUnisex;
+    } else {
+      const GENDER_LIST = [charData.famousMales, charData.famousFemales, charData.famousUnisex];
+      gender = GENDER_LIST[Math.floor(Math.random()*GENDER_LIST.length)];
+    } 
+    console.log(gender)
+    let randomFamousPerson = Math.floor(Math.random()*gender.length);
+    if (attributeToShow == 'name'){
+      return gender[randomFamousPerson].name
+    } else if (attributeToShow == 'age'){
+      return gender[randomFamousPerson].age
+    } else if (attributeToShow == 'horoscope'){
+      return gender[randomFamousPerson].horoscope
+    } else if (attributeToShow == 'type'){
+      return 'Famous'
+    } else if (attributeToShow == 'bio'){
+      return gender[randomFamousPerson].bio
+    } else if (attributeToShow == 'adjectives'){
+      return gender[randomFamousPerson].adjectives
+    } else if (attributeToShow == 'quirkyFact'){
+      return gender[randomFamousPerson].quirkyFact
+    } else if (attributeToShow == 'profession'){
+      return gender[randomFamousPerson].profession
+    }
   } else if (charType == 'notFamous'){
     // run notfamous profile random selection profile
     if (attributeToShow == 'name'){
