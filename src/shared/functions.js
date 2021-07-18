@@ -1,101 +1,101 @@
 export function generateProfile(charType, charData, attributeToShow, randomFamousPerson) {
   // console.log("CharData",charData)
   var gender;
-  if (charType == 'famous'){
+  if (charType === 'famous'){
     // run famous profile
-    if (charData.formValues.charGender == 'male') {
+    if (charData.formValues.charGender === 'male') {
       gender = charData.famousMales;
-    } else if (charData.formValues.charGender == 'female') {
+    } else if (charData.formValues.charGender === 'female') {
       gender = charData.famousFemales;
-    } else if (charData.formValues.charGender == 'androgen' || charData.formValues.charGender == 'neutral') {
+    } else if (charData.formValues.charGender === 'androgen' || charData.formValues.charGender === 'neutral') {
       gender = charData.famousUnisex;
     } else {
       gender = [...charData.famousMales, ...charData.famousFemales, ...charData.famousUnisex];
     } 
 
-    if (attributeToShow == 'name'){
+    if (attributeToShow === 'name'){
       return gender[randomFamousPerson].name
-    } else if (attributeToShow == 'age'){
+    } else if (attributeToShow === 'age'){
       return gender[randomFamousPerson].age
-    } else if (attributeToShow == 'horoscope'){
+    } else if (attributeToShow === 'horoscope'){
       return gender[randomFamousPerson].horoscope
-    } else if (attributeToShow == 'type'){
+    } else if (attributeToShow === 'type'){
       return 'Famous'
-    } else if (attributeToShow == 'bio'){
+    } else if (attributeToShow === 'bio'){
       return gender[randomFamousPerson].bio
-    } else if (attributeToShow == 'adjectives'){
+    } else if (attributeToShow === 'adjectives'){
       return gender[randomFamousPerson].adjectives
-    } else if (attributeToShow == 'quirkyFact'){
+    } else if (attributeToShow === 'quirkyFact'){
       return gender[randomFamousPerson].quirkyFact
-    } else if (attributeToShow == 'profession'){
+    } else if (attributeToShow === 'profession'){
       return gender[randomFamousPerson].profession
     }
-  } else if (charType == 'notFamous'){
+  } else if (charType === 'notFamous'){
     // run notfamous profile random selection profile
-    if (attributeToShow == 'name'){
+    if (attributeToShow === 'name'){
       return generateName(charData.formValues.charGender, charData.maleNames, charData.femaleNames, charData.unisexNames, charData.lastNames)
-    } else if (attributeToShow == 'age'){
+    } else if (attributeToShow === 'age'){
       return generateAge(charData.formValues.charAge)
-    } else if (attributeToShow == 'horoscope'){
+    } else if (attributeToShow === 'horoscope'){
       return randomHoroscope(charData.horoscopes)
-    } else if (attributeToShow == 'type'){
+    } else if (attributeToShow === 'type'){
       return 'Not Famous'
-    } else if (attributeToShow == 'bio'){
+    } else if (attributeToShow === 'bio'){
       return generateBIO()
-    } else if (attributeToShow == 'adjectives'){
+    } else if (attributeToShow === 'adjectives'){
       return generateAdjectives(charData.adjectives.positive, charData.adjectives.negative)
-    } else if (attributeToShow == 'quirkyFact'){
+    } else if (attributeToShow === 'quirkyFact'){
       return generateQuirkyFact(charData.quirkyFacts)
-    } else if (attributeToShow == 'profession'){
+    } else if (attributeToShow === 'profession'){
       return generateProfession(charData.professions)
     }
-  } else if (charType == 'createYourOwn') {
+  } else if (charType === 'createYourOwn') {
     // create your own profile form appears
-    if (attributeToShow == 'name'){
+    if (attributeToShow === 'name'){
       return charData.profile.name
-    } else if (attributeToShow == 'age'){
+    } else if (attributeToShow === 'age'){
       return charData.profile.age
-    } else if (attributeToShow == 'horoscope'){
+    } else if (attributeToShow === 'horoscope'){
       return charData.profile.horoscope
-    } else if (attributeToShow == 'type'){
+    } else if (attributeToShow === 'type'){
       return 'Create your own'
-    } else if (attributeToShow == 'bio'){
+    } else if (attributeToShow === 'bio'){
       return charData.profile.bio
-    } else if (attributeToShow == 'adjectives'){
+    } else if (attributeToShow === 'adjectives'){
       return charData.profile.adjectives
-    } else if (attributeToShow == 'quirkyFact'){
+    } else if (attributeToShow === 'quirkyFact'){
       return charData.profile.quirkyFact
-    } else if (attributeToShow == 'profession'){
+    } else if (attributeToShow === 'profession'){
       return charData.profile.profession
     }
   } else {
     // if no selection on type run notfamous
-    if (attributeToShow == 'name'){
+    if (attributeToShow === 'name'){
       return generateName(charData.formValues.charGender, charData.maleNames, charData.femaleNames, charData.unisexNames, charData.lastNames)
-    } else if (attributeToShow == 'age'){
+    } else if (attributeToShow === 'age'){
       return generateAge(charData.formValues.charAge)
-    } else if (attributeToShow == 'horoscope'){
+    } else if (attributeToShow === 'horoscope'){
       return randomHoroscope(charData.horoscopes)
-    } else if (attributeToShow == 'type'){
+    } else if (attributeToShow === 'type'){
       return 'Not Famous (default)'
-    } else if (attributeToShow == 'bio'){
+    } else if (attributeToShow === 'bio'){
       return generateBIO()
-    } else if (attributeToShow == 'adjectives'){
+    } else if (attributeToShow === 'adjectives'){
       return generateAdjectives(charData.adjectives.positive, charData.adjectives.negative)
-    } else if (attributeToShow == 'quirkyFact'){
+    } else if (attributeToShow === 'quirkyFact'){
       return generateQuirkyFact(charData.quirkyFacts)
-    } else if (attributeToShow == 'profession'){
+    } else if (attributeToShow === 'profession'){
       return generateProfession(charData.professions)
     }
   }
 }
 
 function generateName(gender, maleNames, femaleNames, unisexNames, lastNames) {
-  if (gender == 'male') {
+  if (gender === 'male') {
     return maleNames[Math.floor(Math.random()*maleNames.length)].name + ' ' + lastNames[Math.floor(Math.random()*lastNames.length)].name;
-  } else if (gender == 'female') {
+  } else if (gender === 'female') {
     return femaleNames[Math.floor(Math.random()*femaleNames.length)].name + ' ' + lastNames[Math.floor(Math.random()*lastNames.length)].name;
-  } else if (gender == 'unisex') {
+  } else if (gender === 'unisex') {
     return unisexNames[Math.floor(Math.random()*unisexNames.length)].name + ' ' + lastNames[Math.floor(Math.random()*lastNames.length)].name;
   } else {
     return maleNames[Math.floor(Math.random()*maleNames.length)].name + ' ' + lastNames[Math.floor(Math.random()*lastNames.length)].name;
@@ -103,17 +103,17 @@ function generateName(gender, maleNames, femaleNames, unisexNames, lastNames) {
 }
 
 function generateAge(ageRange) {
-  if (ageRange == '10-19') {
+  if (ageRange === '10-19') {
     return Math.floor(Math.random() * (19 - 10) + 10);
-  } else if (ageRange == '20-29'){
+  } else if (ageRange === '20-29'){
     return Math.floor(Math.random() * (29 - 20) + 20);
-  } else if (ageRange == '30-39'){
+  } else if (ageRange === '30-39'){
     return Math.floor(Math.random() * (39 - 30) + 30);
-  } else if (ageRange == '40-49'){
+  } else if (ageRange === '40-49'){
     return Math.floor(Math.random() * (49 - 40) + 40);
-  } else if (ageRange == '50-59'){
+  } else if (ageRange === '50-59'){
     return Math.floor(Math.random() * (59 - 50) + 50);
-  } else if (ageRange == '59+'){
+  } else if (ageRange === '59+'){
     return Math.floor(Math.random() * (125 - 59) + 59);
   } else {
     return Math.floor(Math.random() * (125 - 10) + 10);

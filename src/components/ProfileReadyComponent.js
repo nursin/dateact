@@ -5,11 +5,11 @@ var randomFamousPerson = 1;
 class Profile extends Component {
 
   randomFamousPerson () {
-    if (this.props.data.formValues.charGender == 'male') {
+    if (this.props.data.formValues.charGender === 'male') {
       randomFamousPerson = Math.floor(Math.random()*this.props.data.famousMales.length);
-    } else if (this.props.data.formValues.charGender == 'female') {
+    } else if (this.props.data.formValues.charGender === 'female') {
       randomFamousPerson = Math.floor(Math.random()*this.props.data.famousFemales.length);
-    } else if (this.props.data.formValues.charGender == 'androgen' || this.props.data.formValues.charGender == 'neutral') {
+    } else if (this.props.data.formValues.charGender === 'androgen' || this.props.data.formValues.charGender === 'neutral') {
       randomFamousPerson = Math.floor(Math.random()*this.props.data.famousUnisex.length);
     } else {
       const GENDER_LIST = [this.props.data.famousMales, this.props.data.famousFemales, this.props.data.famousUnisex];
