@@ -50,7 +50,7 @@ class CreateChar extends Component {
           <div className="col-12">
             <Breadcrumb>
               <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-              <BreadcrumbItem active>Profile ready</BreadcrumbItem>
+              <BreadcrumbItem active>Create you character</BreadcrumbItem>
             </Breadcrumb>
             <Card className="custom-card">
               <CardHeader className="bg-gradient"><h2 className="text-white text-center">Create your character</h2></CardHeader>
