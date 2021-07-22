@@ -98,6 +98,7 @@ class Main extends Component {
       );
     }
 
+    // the setchanged function could be an arrow function. since they are  ot this might be causing the page to load 3 times and even setting changed 3 times when loading which could be the cause of a few errors i fixed before.
     const ChooseFeaturesFormPage = () => {
       return (
         <RenderChooseFeaturesForm data={this.state} setChanged={this.setChanged}/>
@@ -120,13 +121,12 @@ class Main extends Component {
       <div>
         <Header />
         <Switch>
-          <Route path='/home' component={HomePage} />
+          <Route exact path='/home' component={HomePage} />
           <Route path='/aboutus' component={AboutPage} />
           <Route path='/contactus' component={ContactPage} />
-          <Route path='/choosefeaturesform' component={ChooseFeaturesFormPage} />
-          <Route path='/createchar' component={CreateCharFormPage} />
-          <Route path='/profileready' component={ProfileReadyComponentPage} />
-          <Route path='/restart' component={HomePage} />
+          <Route path='/home/choosefeaturesform' component={ChooseFeaturesFormPage} />
+          <Route path='/home/createchar' component={CreateCharFormPage} />
+          <Route path='/home/profileready' component={ProfileReadyComponentPage} />
           <Redirect to='/home' />
         </Switch>
         <Footer />

@@ -36,10 +36,10 @@ class RenderChooseFeaturesForm extends Component {
     // console.log(this.props.data.formValues.charType)
     if (changePage && this.props.data.formValues.charType === 'createYourOwn') {
       changePage = false;
-      return <Redirect to='/createchar' />
+      return <Redirect to='/home/createchar' />
     } else if (changePage){
       changePage = false;
-      return <Redirect to='/profileready' />
+      return <Redirect to='/home/profileready' />
     }
   }
 

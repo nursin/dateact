@@ -38,7 +38,7 @@ class CreateChar extends Component {
       changePage = false;
       this.props.data.profile.type = 'createYourOwn'
       this.props.data.formValues.charType = 'createYourOwn'
-      return <Redirect to='/profileready' />
+      return <Redirect to='/home/profileready' />
     }
   }
 

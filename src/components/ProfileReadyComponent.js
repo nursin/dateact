@@ -36,7 +36,7 @@ class Profile extends Component {
                 <div id="quirky-fact" className="col-8 mt-1 text-left"><strong>Quirky fact: </strong>{generateProfile(this.props.data.formValues.charType, this.props.data, 'quirkyFact', randomFamousPerson)}</div>
                 <div id="profession" className="col-12 mt-1 text-left"><strong>Profession: </strong>{generateProfile(this.props.data.formValues.charType, this.props.data, 'profession', randomFamousPerson)}</div>
                 <div className="btn-group mt-4 ml-2">
-                  <Link className="btn btn-secondary btn-lg" to="/restart">Restart</Link>
+                  <Link className="btn btn-secondary btn-lg" to="/home">Restart</Link>
                   {/* <!-- <button id="saveProfileBtn" class="btn btn text-white bg-blue button-hover-bg-gradient">Save</button> --> */}
                 </div>
               </div>
