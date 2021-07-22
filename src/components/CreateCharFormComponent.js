@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Card, CardHeader, CardBody, Label, Button } from 'reactstrap';
+import { Card, CardHeader, CardBody, Label, Button, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link, Redirect } from 'react-router-dom';
-import { Control, LocalForm} from 'react-redux-form';
+import { Control, LocalForm } from 'react-redux-form';
 var changePage = false;
 
 class CreateChar extends Component {
@@ -21,7 +21,7 @@ class CreateChar extends Component {
 
   }
 
-  handleSubmit (values) {
+  handleSubmit(values) {
     // console.log("Current state is: " + JSON.stringify(values));
     changePage = true;
     this.props.setChanged(values);
@@ -46,8 +46,12 @@ class CreateChar extends Component {
     // console.log("Data", this.props.data)
     return (
       <div className="container">
-        <div className="row row-content">
+        <div className="row mb-5">
           <div className="col-12">
+            <Breadcrumb>
+              <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+              <BreadcrumbItem active>Profile ready</BreadcrumbItem>
+            </Breadcrumb>
             <Card className="custom-card">
               <CardHeader className="bg-gradient"><h2 className="text-white text-center">Create your character</h2></CardHeader>
               <CardBody>
@@ -55,49 +59,49 @@ class CreateChar extends Component {
                   <div className="form-group">
                     <Label htmlFor="createName">Name</Label>
                     {/* eslint-disable-next-line */}
-                      <Control.text id="createName" model=".createName" className="form-control" name="createName">
-                      </Control.text>
+                    <Control.text id="createName" model=".createName" className="form-control" name="createName">
+                    </Control.text>
                   </div>
                   <div className="form-group">
                     <Label htmlFor="createAge">Age</Label>
                     {/* eslint-disable-next-line */}
-                      <Control.text id="createAge" model=".createAge" className="form-control" name="createAge">
-                      </Control.text>
+                    <Control.text id="createAge" model=".createAge" className="form-control" name="createAge">
+                    </Control.text>
                   </div>
                   <div className="form-group">
                     <Label htmlFor="createHoroscope">Horoscope</Label>
                     {/* eslint-disable-next-line */}
-                      <Control.text id="createHoroscope" model=".createHoroscope" className="form-control" name="createHoroscope" >
-                      </Control.text>
+                    <Control.text id="createHoroscope" model=".createHoroscope" className="form-control" name="createHoroscope" >
+                    </Control.text>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createBio">Bio</Label>
                     {/* eslint-disable-next-line */}
-                      <Control.textarea id="createBio" model=".createBio" className="form-control" name="createBio" rows="5">
-                      </Control.textarea>
+                    <Control.textarea id="createBio" model=".createBio" className="form-control" name="createBio" rows="5">
+                    </Control.textarea>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createAdjectives">Adjectives</Label>
                     {/* eslint-disable-next-line */}
-                      <Control.text id="createAdjectives" model=".createAdjectives" className="form-control" name="createAdjectives">
-                      </Control.text>
+                    <Control.text id="createAdjectives" model=".createAdjectives" className="form-control" name="createAdjectives">
+                    </Control.text>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createQuirkyFact">Quirky Fact</Label>
                     {/* eslint-disable-next-line */}
-                      <Control.text id="createQuirkyFact" model=".createQuirkyFact" className="form-control" name="createQuirkyFact">
-                      </Control.text>
+                    <Control.text id="createQuirkyFact" model=".createQuirkyFact" className="form-control" name="createQuirkyFact">
+                    </Control.text>
                   </div>
                   <div className="form-group">
                     <Label className="col-lg-3" htmlFor="createProfession">Profession</Label>
                     {/* eslint-disable-next-line */}
-                      <Control.text id="createProfession" model=".createProfession" className="form-control" name="createProfession">
-                      </Control.text>
+                    <Control.text id="createProfession" model=".createProfession" className="form-control" name="createProfession">
+                    </Control.text>
                   </div>
                   <div className="form-group mt-4">
                     <div className="col btn-group">
                       <Button type="submit" className="btn btn-lg text-white bg-blue button-hover-bg-gradient"><i className="fa fa-transgender-alt fa-lg"></i> Create</Button>
-                      <Link to='/choosefeaturesform' role="button" className="btn btn-secondary btn-lg">Back</Link>
+                      <Link to='/home/choosefeaturesform' role="button" className="btn btn-secondary btn-lg">Back</Link>
                     </div>
                   </div>
                 </LocalForm>

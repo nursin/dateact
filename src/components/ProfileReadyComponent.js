@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { generateProfile } from '../shared/functions';
+import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 var randomFamousPerson = 1;
 class Profile extends Component {
 
-  randomFamousPerson () {
+  randomFamousPerson() {
     if (this.props.data.formValues.charGender === 'male') {
-      randomFamousPerson = Math.floor(Math.random()*this.props.data.famousMales.length);
+      randomFamousPerson = Math.floor(Math.random() * this.props.data.famousMales.length);
     } else if (this.props.data.formValues.charGender === 'female') {
-      randomFamousPerson = Math.floor(Math.random()*this.props.data.famousFemales.length);
+      randomFamousPerson = Math.floor(Math.random() * this.props.data.famousFemales.length);
     } else if (this.props.data.formValues.charGender === 'androgen' || this.props.data.formValues.charGender === 'neutral') {
-      randomFamousPerson = Math.floor(Math.random()*this.props.data.famousUnisex.length);
+      randomFamousPerson = Math.floor(Math.random() * this.props.data.famousUnisex.length);
     } else {
       const GENDER_LIST = [this.props.data.famousMales, this.props.data.famousFemales, this.props.data.famousUnisex];
-      randomFamousPerson = Math.floor(Math.random()*GENDER_LIST.length);
-    } 
+      randomFamousPerson = Math.floor(Math.random() * GENDER_LIST.length);
+    }
   }
 
   render() {
@@ -22,8 +23,12 @@ class Profile extends Component {
     this.randomFamousPerson();
     return (
       <div className="container">
-        <div className="row row-content">
+        <div className="row mb-5">
           <div className="col-12">
+            <Breadcrumb>
+              <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+              <BreadcrumbItem active>Profile ready</BreadcrumbItem>
+            </Breadcrumb>
             <div className="card custom-card">
               <div className="card-header bg-gradient"><h2 className="text-white text-center" id="profileHeader">Character profile ready</h2></div>
               <div className="card-body col">
